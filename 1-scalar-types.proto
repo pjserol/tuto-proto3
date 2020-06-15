@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+/* Person is used to identify the users
+ * across our system */
+message Person {
+  int32 age = 1;
+  string first_name = 2;
+  string last_name = 3;
+  bytes small_picture = 4;
+  bool is_profile_verified = 5;
+  float height = 6;
+
+  repeated string phone_numbers = 7; // repeated keyword for list
+
+  enum EyeColour {
+    // first value of an Enum is the default value
+    // enum must start by the tag 0
+    UNKNOWN_COLOUR = 0;
+    EYE_GREEN = 1;
+    EYE_BROWN = 2;
+    EYE_BLUE = 3;
+  }
+
+  EyeColour eye_colour = 8;
+}

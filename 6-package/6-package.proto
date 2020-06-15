@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+// always use the full path
+import "6-package/6-date.proto";
+
+package person;
+
+/* Person is used to identify the users
+ * across our system */
+message Person {
+  int32 age = 1;
+  string first_name = 2;
+  string last_name = 3;
+
+  // prefix message with package name 
+  my.date.Date birthday =   4;  
+}

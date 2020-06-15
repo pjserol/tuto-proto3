@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+/* Person is used to identify the users
+ * across our system */
+message Person {
+  int32 age = 1;
+  string first_name = 2;
+  string last_name = 3;
+
+  Date birthday = 4;
+}
+
+message Date {
+  int32 year = 1;
+  int32 month = 2;
+  int32 day = 3;
+}
